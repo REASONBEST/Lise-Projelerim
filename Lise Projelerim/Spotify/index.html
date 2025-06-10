@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="icon" href="indir.png" type="image/x-icon">
+</head>
+    <style>
+    body{
+        background-color: rgb(107, 244, 107);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 25px;
+    }
+
+    button{
+        align-items: center;
+    }
+
+    h1{
+        color: rgb(0, 0, 0);
+    }
+
+    h2{
+        color: white;
+        margin: 20px;
+    }
+
+    #katagori{
+        background: black;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 1170px;
+        padding-bottom: 0;
+        margin-bottom: 100px;
+    }
+
+    #katagori2{
+        background: black;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 1170px;
+        padding-bottom: 0;
+        margin-bottom: 100px;
+    }
+
+    #katagori3{
+        background: black;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 1170px;
+        padding-bottom: 0;
+        margin-bottom: 100px;
+    }
+
+    .sarkı{
+        background: #81f056;
+        border: 1px solid #ddd;
+        margin-left: 15px;
+        border-radius: 15px;
+        margin-right: 15px;
+        margin: 12px;
+    }
+
+    .sarkı:hover{
+        transform: translateY(-10px);
+        box-shadow: #666;        
+        box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        text-align: left;
+        border-radius: 15px;
+    }
+
+    .aciklama{
+        margin-left: 15px;
+    }
+    audio{
+        margin-left: 10px;
+        width: 500px;
+    }
+
+    button{
+        margin: 15px auto 15px auto;
+        padding: 5px 10px;
+        color: rgb(107, 244, 107);
+        background-color: black;
+        border-radius: 15px;
+        display: block;
+    }
+
+    button:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+    }
+
+    #anakart{
+        margin-top: 260px;
+        margin-bottom: 265px;
+    }
+
+    a{
+        margin: 15px auto 15px auto;
+        padding: 5px 10px;
+        margin-right: 0px;
+        color: rgb(107, 244, 107);    
+        background-color: black;
+        border-radius: 15px;
+        display: block;
+        position: absolute;
+        padding: 10px;
+        top: 561px;
+        right: 22px;
+        z-index: 1000;
+    }
+
+    a:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+    }
+
+    .blok{
+        transition: 0.3 ease;
+    }
+
+    .ati{
+        margin: 15px auto 15px auto;
+        padding: 5px 10px;
+        margin-right: 0px;
+        color: rgb(107, 244, 107);
+        background-color: black;
+        border-radius: 15px;
+        display: block;
+        position: absolute;
+        padding: 10px;
+        top: 1200px;
+        right: 22px;
+        z-index: 1000;
+    }
+
+    .ati:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+    }
+
+    .motive{
+        margin: 15px auto 15px auto;
+        padding: 5px 10px;
+        margin-right: 0px;
+        color: rgb(107, 244, 107);
+        background-color: black;
+        border-radius: 15px;
+        display: block;
+        position: absolute;
+        padding: 10px;
+        top: 1858px;
+        right: 22px;
+        z-index: 1000;
+    }
+
+    .motive:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+    }
+
+    .yukarı{
+        margin: 15px auto 15px auto;
+        padding: 5px 10px;
+        margin-right: 0px;
+        color: rgb(107, 244, 107);
+        background-color: black;
+        border-radius: 15px;
+        display: block;
+        position: absolute;
+        padding: 10px;
+        top: 2513px;
+        right: 22px;
+        z-index: 1000;
+    }
+
+    .yukarı:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+    }
+
+
+</style>
+<body>
+    <section id="yukarı">
+    <div id="anakart">
+        <a href="#blok" class="blok">▼</a>
+        <h1><center>SPOTİFY</center></h1>
+        <strong><center>Sayfamıza Hosgeldiniz, Bu Haftanın Popüler Sanatcıların, Popüler Şarkıları Sizlerle;</center></strong>
+        <button>Gece Modu</button>
+    </div>
+    </section>
+
+    <section id="blok">
+    <a href="#ati" class="ati">▼</a>
+    <div id="katagori">
+        <h2>BLOK3</h2>
+        <div class="sarkı">
+            <p class="aciklama"><b>BLOK3</b> - <i>Sevmeyi Denemedin</i></p>
+            <audio controls src="mp3indirdur-BLOK3-SEVMEYI-DENEMEDIN.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>BLOK3 & ATİ242</b> - <i>Keşke</i></p>
+            <audio controls src="mp3indirdur-BLOK3-Keske-ft-Ati242.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>BLOK3</b> - <i>Uyuz</i></p>
+            <audio controls src="mp3indirdur-BLOK3-UYUZ.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>BLOK3</b> - <i>Neden</i></p>
+            <audio controls src="mp3indirdur-BLOK3-UYUZ.mp3"></audio>
+        </div>
+    </div>
+    </section>
+    <a href="#motive" class="motive">▼</a>
+    <a href="#yukarı" class="yukarı">▲</a>
+ 
+    <section id="ati">
+    <div id="katagori2">
+      <h2>ATİ242</h2>
+        <div class="sarkı">
+            <p class="aciklama"><b>ATİ242</b> - <i>Degismene Ragmen</i></p>
+            <audio controls src="mp3indirdur-Ati242-Degismene-Ragmen.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>ATİ242</b> - <i>Italy Forma</i></p>
+            <audio controls src="mp3indirdur-Ati242-Italy-Forma.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>ATİ242</b> - <i>Sönen Sigaralar</i></p>
+            <audio controls src="mp3indirdur-Ati242-Sonen-Sigaralar.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>ATİ242</b> - <i>25</i></p>
+            <audio controls src="mp3indirdur-Ati242-Sonen-Sigaralar.mp3"></audio>
+        </div>
+    </div>
+    </section>
+
+    <section id="motive">
+    <div id="katagori3">
+      <h2>MOTİVE</h2>
+        <div class="sarkı">
+            <p class="aciklama"><b>MOTİVE</b> - <i>Restoran</i></p>
+            <audio controls src="mp3indirdur-Motive-RESTORAN.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>MOTİVE</b> - <i>Takip</i></p>
+            <audio controls src="mp3indirdur-Motive-Takip.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>MOTİVE</b> - <i>pVg</i></p>
+            <audio controls src="mp3indirdur-Motive-pVg.mp3"></audio>
+        </div>
+
+        <div class="sarkı">
+            <p class="aciklama"><b>MOTİVE</b> - <i>Herseyim</i></p>
+            <audio controls src="mp3indirdur-Motive-pVg.mp3"></audio>
+        </div>
+      </div>
+    </div>
+    </section>
+</body>
+</html>

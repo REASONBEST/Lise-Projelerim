@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Metin Sayacı</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    textarea {
+      width: 300px;
+      height: 100px;
+      font-size: 20px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .counter {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Metin Girin</h1>
+  <textarea id="textInput" maxlength="100" oninput="updateCount()"></textarea>
+  <div class="counter" id="counterText">
+    0 karakter | 0 kelime | 100 karakter kaldı
+  </div>
+
+  <script>
+    function updateCount() {
+      const textarea = document.getElementById("textInput");
+      const text = textarea.value;
+      const characterCount = text.length;
+      const wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+      const remaining = 100 - characterCount;
+
+      document.getElementById("counterText").innerText =
+        `${characterCount} karakter | ${wordCount} kelime | ${remaining} karakter kaldı`;
+    }
+  </script>
+
+</body>
+</html>

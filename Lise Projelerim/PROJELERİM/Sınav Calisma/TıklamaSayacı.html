@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TıklamaSayacı</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tıklama Sayacı</h1>
+        <p>Butona tıklayın:</p>
+        <button onclick="tikla()">Tıkla</button><br><br>
+        <div id="sayac">Tıklama: 0 </div><br>
+        <button id="reset" onclick="sifirla()">Sifirla</button>
+    </div>
+    <script>
+        let sayi = 0;
+        function tikla() {
+            sayi++;
+            document.getElementById("sayac").innerText = "Tıklama :" + sayi;
+        }
+        function sifirla() {
+            sayi = 0;
+            document.getElementById("sayac").innerText = "Tıklama:0";
+        }
+    </script>
+</body>
+</html>

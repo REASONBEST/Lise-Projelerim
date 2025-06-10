@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Not Alma Uygulaması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        h1 {
+            color: black;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: red;
+            font-size: 18px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 2px solid black;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: disc;
+            text-align: left;
+            max-width: 500px;
+            margin: 30px auto 0;
+            font-size: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .deleteBtn {
+            margin-left: 15px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Not Alma Uygulaması</h2>
+    <h1>Basit Not Alıcı</h1>
+
+    <input type="text" id="noteInput" placeholder="Notunuzu buraya yazın">
+    <button onclick="addNote()">Not Ekle</button>
+
+    <ul id="noteList"></ul>
+
+    <script>
+        function addNote() {
+            const noteText = document.getElementById("noteInput").value.trim();
+            if (noteText === "") return;
+
+            const li = document.createElement("li");
+            li.textContent = noteText;
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Sil";
+            deleteBtn.className = "deleteBtn";
+            deleteBtn.onclick = function () {
+                li.remove();
+            };
+
+            li.appendChild(deleteBtn);
+            document.getElementById("noteList").appendChild(li);
+            document.getElementById("noteInput").value = "";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toplama Çıkarma</title>
+</head>
+
+<body>
+    <h2> Basit Toplama Çıkarma İşlemi</h2>
+
+    <input type="text" id="sayi1" placeholder="Sayı 1"><br>
+    <input type="text" id="sayi2" placeholder="Sayı 2"><br>
+
+    <select id="islem">
+        <option value="toplama"> Toplama</option>
+        <option value="cıkarma"> Çıkarma</option>
+        <option value="carpma"> Çarpma</option>
+        <option value="bölme"> Bölme</option>
+    </select><br>
+
+    <button onclick="hesapla()">Hesapla</button>
+
+    <div id="sonuc"></div>
+
+    <script>
+        function hesapla() {
+            var sayi1 = parseFloat(document.getElementById("sayi1").value);
+            var sayi2 = parseFloat(document.getElementById("sayi2").value);
+            var islem = document.getElementById("islem").value;
+            var sonuc;
+
+            if (!sayi1 || !sayi2) {
+                sonuc = "Lütfen Geçerli sayılar girin.";
+            }
+            else {
+                switch (islem) {
+                    case "toplama":
+                        sonuc = sayi1 + sayi2;
+                        break;
+                    case "cıkarma":
+                        sonuc = sayi1 - sayi2;
+                        break;
+                    case "carpma":
+                        sonuc = sayi1 * sayi2;
+                        break;
+                    case "bölme":
+                        if (sayi2 == 0) {
+                            sonuc = "Bir sayi 0'a bölünmez!";
+                        } else {
+                            sonuc = sayi1 / sayi2;
+                        }
+                        break;
+                }
+            }
+            document.getElementById("sonuc").innerHTML = "Sonuç:" + sonuc;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenar yuvarlama</title>
+</head>
+<body>
+    <style>
+        body{background-color: gray; color: white;  font-weight: bold;}
+        #cerceve{background-color: orange; width: 500px; height: 500px;}
+    </style>
+    <div id="cerceve"> </div>
+    <form>
+        <input type="radio" name="secim" onclick="kenarYuvarla('0px')" value="0">
+        <label for="male">0 pixel</label><br>
+        <input type="radio" name="secim" onclick="kenarYuvarla('55px')" value="55">
+        <label for="male">55 pixel</label><br>
+        <input type="radio" name="secim" onclick="kenarYuvarla('90px')" value="90">
+        <label for="male">90 pixel</label><br>
+        <input type="radio" name="secim" onclick="kenarYuvarla('250px')" value="250">
+        <label for="male">250 pixel</label><br>
+    </form>
+
+    <script>
+        function kenarYuvarla(derece){
+            document.getElementById("cerceve").style.borderRadius=derece;
+        }
+    </script>
+</body>
+</html>

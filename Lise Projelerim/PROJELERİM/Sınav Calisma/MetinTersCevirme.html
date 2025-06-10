@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metin Ters Çevirme</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: red;
+    }
+
+    .container {
+      background-color: white;
+      width: 400px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .reversed {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Metin Ters Çevirme</h1>
+
+  <div class="container">
+    <h2>Metin Ters Çevirici</h2>
+    <input type="text" id="girilenYazi" placeholder="Lütfen hErkes Yüksek Alsın">
+    <br>
+    <button onclick="terscevir()">Ters Çevir</button>
+    <div class="result" id="sonucyazısı"></div>
+  </div>
+
+  <script>
+    function terscevir() {
+      const input = document.getElementById('girilenYazi').value;
+      const reversed = input.split('').reverse().join('');
+      document.getElementById('sonucyazısı').innerHTML = 'Çevrilen Metin: <span class="reversed">' + reversed + '</span>';
+    }
+  </script>
+</body>
+</html>

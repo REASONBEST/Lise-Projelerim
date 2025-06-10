@@ -1,0 +1,59 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /* satırlar arası boşluk */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* sayfa arka planı */
+    color: #333;
+}
+
+header{
+    background: rgb(108, 108, 250);
+    color: white;
+    text-align: center; /*  yazıları konumlandırma*/
+    padding: 20px 0; /*üst ve alt boşluk */
+}
+
+/*Menü */
+nav ul{
+    list-style: none; /*Liste işaretini kaldırır */
+    padding: 0;
+    margin: 0;
+    display: flex; /*Esnek düzen (yatay sıralama) */
+    justify-content: center; /*Ortala */
+    background: #333; /*Menü arkaplan rengi */
+}
+
+nav ul li{
+    margin: 0 10px  ;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover{
+    background: #0073e6; /*hover (üzerine gelince) arka plan */
+    border-radius: 5px; /*köşeleri yuvarlat */
+}
+
+/*bölüm */
+section{
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px; /*köşeleri yuvarlat */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*Hafif gölge */
+}
+
+/*Alt bilgi (footer) */
+footer{
+    text-align: center;
+    padding: 100px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}

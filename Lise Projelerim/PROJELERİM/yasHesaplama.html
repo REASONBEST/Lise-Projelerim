@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Yaş Hesaplayıcı</title>
+  <style>
+    body {
+      background-color: #eaf6fb;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Yaş Hesaplayıcı</h1>
+  <label for="birthYear">Doğum Yılınızı Girin:</label><br>
+  <input type="text" id="birthYear" placeholder="Örn: 2001"><br>
+  <button onclick="hesapla()">Hesapla</button>
+  <p id="result"></p>
+
+  <script>
+    function hesapla() {
+      const year = document.getElementById("birthYear").value;
+      const currentYear = new Date().getFullYear();
+      const age = currentYear - parseInt(year);
+
+      if (!isNaN(age) && age >= 0 && year.length === 4) {
+        document.getElementById("result").textContent = `Şu an ${age} yaşındasınız.`;
+      } else {
+        document.getElementById("result").textContent = "Lütfen geçerli bir yıl giriniz.";
+        document.getElementById("result").style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

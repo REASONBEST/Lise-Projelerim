@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cumle = "My name is Emirhan <br/>";
+        
+        var result = cumle.substring(15,10);
+        //substring = start,end
+        document.write(result);
+        var result2 = cumle.substr(8,4);
+        //substr = start,length
+        document.write(result2);  
+        var result11 = cumle.toLocaleUpperCase();
+        document.write(result11);
+
+        var result12 = cumle.toLocaleLowerCase();
+        document.write(result12);
+        var result3 = cumle.includes("is");
+        document.write(result3);
+        var result4 = cumle.search("Emirhan");
+        document.write(result4);
+        var result5 = cumle.search(/Emirhan/i);
+        document.write(result5);
+
+        var result6 = cumle.repeat(10);
+        document.write(result6);
+
+        var result7 = cumle.replace("My","Emirhan");
+        document.write(result7);
+
+        var result8 = cumle.link("https://www.ekarhafriyat.com/");
+        document.write(result8);
+
+        var result9 = cumle.startsWith("M");
+        document.write(result9);
+
+        var result10 = cumle.endsWith("E");
+        document.write(result10);
+
+        
+
+
+    </script>
+</body><br>
+</html>

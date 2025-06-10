@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cumle = "emirhan berat";
+        var result = encodeURI(cumle); //özel kelimlerle şifre oluşturur
+        document.write(result + "<br/>");
+        var result2 = decodeURI(result); //özel kelimlerle oluşturulan şifreyi eski haline alır(şifrelenmişi çözme)
+        document.write(result2);
+
+
+
+        var cumle2 = "EMİRHAN KARAÇAVUŞ";
+        var result = encodeURI(cumle2);
+        document.write(result + "<br/>")
+        var result22 = decodeURI(result);
+        document.write(result22)
+    </script>
+</body>
+</html>
